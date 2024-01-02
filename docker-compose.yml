@@ -1,0 +1,24 @@
+version: '3.4'
+name: laravel-trustup-io-package-boilerplate
+services:
+  app:
+    container_name: laravel-trustup-io-package-boilerplate-app
+    build:
+      context: .
+      target: runner
+    image: laravel-trustup-io-package-boilerplate-app-local
+    ports:
+      - ${VITE_PORT:-8000}:${VITE_PORT:-8000}
+    volumes:
+      - ./:/usr/src/app
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.laravel-trustup-io-package-boilerplate.tls=true
+      - traefik.http.routers.laravel-trustup-io-package-boilerplate.rule=Host("laravel-trustup-io-package-boilerplate.docker.localhost")
+      - traefik.http.services.laravel-trustup-io-package-boilerplate.loadbalancer.server.port=${VITE_PORT:-8000}
+    networks:
+      - applications
+networks:
+    applications:
+        name: applications
+        external: true
