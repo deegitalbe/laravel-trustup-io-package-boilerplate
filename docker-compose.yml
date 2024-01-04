@@ -1,4 +1,4 @@
-version: '3.4'
+version: "3.4"
 name: laravel-trustup-io-package-boilerplate
 services:
   app:
@@ -19,6 +19,6 @@ services:
     networks:
       - applications
 networks:
-    applications:
-        name: applications
-        external: true
+  applications:
+    name: applications
+    external: true

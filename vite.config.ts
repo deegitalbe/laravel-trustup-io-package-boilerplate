@@ -17,8 +17,8 @@ export default defineConfig(({ mode }) => {
     test: {
       browser: {
         enabled: true,
-        name: "chrome"
-      }
-    }
+        name: "chrome",
+      },
+    },
   };
 });

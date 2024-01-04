@@ -1,10 +1,10 @@
 {
   "name": "@deegital/laravel-trustup-io-package-boilerplate",
   "version": "0.0.1",
-  "description": "Scaffolding a laravel package.",
-  "type": "module",
+  "description": "Scaffolding deployments folder for our laravel projects",
   "files": [
-    "dist"
+    "dist",
+    "stubs"
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -15,6 +15,9 @@
     }
   },
   "types": "dist/index.d.ts",
+  "bin": {
+    "laravel-trustup-io-package-boilerplate": "./bin/laravel-trustup-io-package-boilerplate.js"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -54,5 +57,8 @@
     "vite": "^4.3.2",
     "vite-plugin-eslint": "^1.8.1",
     "vitest": "^0.31.2"
+  },
+  "dependencies": {
+    "@henrotaym/scaffolding-utils": "^1.2.1"
   }
 }
