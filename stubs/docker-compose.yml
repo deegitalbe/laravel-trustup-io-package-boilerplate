@@ -4,6 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: {{{{packageName}}}}-local
+    image: "{{{{packageName}}}}-local"
     volumes:
       - ./:/usr/src/app
