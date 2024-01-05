@@ -1,0 +1,42 @@
+{
+  "name": "{{{{organizationName}}}}/{{{{packageName}}}}",
+  "description": "Basic versioned php package.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mathieu Henrotay",
+      "email": "mathieu.henrotay@gmail.com"
+    }
+  ],
+  "require": {
+    "henrotaym/laravel-package-versioning-config": "^1.3"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0",
+    "phpunit/phpunit": "^10.0",
+    "pestphp/pest": "^2.30"
+  },
+  "autoload": {
+    "psr-4": {
+      "{{{{phpOrganizationName}}}}\\{{{{phpPackageName}}}}\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "{{{{phpOrganizationName}}}}\\{{{{phpPackageName}}}}\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "{{{{phpOrganizationName}}}}\\{{{{phpPackageName}}}}\\Providers\\{{{{phpPackageName}}}}ServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
