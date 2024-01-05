@@ -1,5 +1,16 @@
 # @deegital/laravel-trustup-io-package-boilerplate
 
+## 1.0.0
+
+### Major Changes
+
+- 6d40bbb: Stable version with changeset.
+
+### Patch Changes
+
+- 9d0249d: Cluster autoscale parameter is compulsory true.
+- 6161ee3: Working example
+
 ## 1.4.2
 
 ### Patch Changes
